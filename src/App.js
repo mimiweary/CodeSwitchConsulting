@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./Card";
+import Button from './Button.js';
 
 function App() {
   const [allUsers, setAllUsers] = useState([]);
@@ -30,7 +31,10 @@ function App() {
   return (
     <div className="App">
       <h1>Users</h1>
-      <input className="search-box" onInput={filterCards} placeholder="Search..."/>
+      
+      <button onClick={filterCards} className='button1' 
+      type='button'>Refresh</button>
+
       <div className="cards-container">
 
       {users.map((user, index) => (
